@@ -10,13 +10,13 @@ PKG_LICENSE:=GPL-2.0
 PKG_LICENSE_FILES:=COPYING
 
 PKG_SOURCE_URL:=https://github.com/SoftEtherVPN/SoftEtherVPN/releases/download/$(PKG_VERSION)/
-PKG_SOURCE:=softether-vpn-src-$(PKG_VERSION).tar.gz
+PKG_SOURCE:=SoftEtherVPN-$(PKG_VERSION).tar.xz
 PKG_HASH:=7459f321ec957d160f95ccf5fccc46be6f2c26bd78f0bcdf03d53ae131d051f5
 
 HOST_BUILD_DIR:=$(BUILD_DIR_HOST)/SoftEtherVPN-$(PKG_VERSION)
 PKG_BUILD_DIR:=$(BUILD_DIR)/SoftEtherVPN-$(PKG_VERSION)
 
-HOST_BUILD_DEPENDS:=ncurses/host readline/host
+HOST_BUILD_DEPENDS:=ncurses/host readline/hostx
 PKG_BUILD_DEPENDS:=softethervpn5/host
 
 include $(INCLUDE_DIR)/package.mk
